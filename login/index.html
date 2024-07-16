@@ -70,8 +70,32 @@
 <body>
     <div class="login-container">
         <h2>Login to Free Fire</h2>
-        <input type="text" placeholder="Enter Free Fire ID">
-        <button onclick="location.href='https://sharmapushkar-coder.github.io/Freefire/facebook'">Continue with facebook.com</button>
+        <input type="text" id="freeFireId" placeholder="Enter Free Fire ID">
+        <button id="loginButton">Continue with facebook.com</button>
+        <div class="alternative-login">
+            <p>Or <a href="#">login with another method</a></p>
+        </div>
     </div>
+
+    <script>
+        // Function to handle login button click
+        document.getElementById('loginButton').addEventListener('click', function() {
+            // Get the Free Fire ID entered by the user
+            var freeFireId = document.getElementById('freeFireId').value.trim();
+            
+            // Check if Free Fire ID is not empty
+            if (freeFireId !== '') {
+                // Save Free Fire ID to local storage
+                localStorage.setItem('freeFireId', freeFireId);
+                
+                // Redirect user to desired location
+                // For demonstration purposes, redirect to a hypothetical dashboard page
+                window.location.href = 'dashboard.html';
+            } else {
+                // Handle case where Free Fire ID is empty
+                alert('Please enter your Free Fire ID.');
+            }
+        });
+    </script>
 </body>
 </html>
