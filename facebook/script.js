@@ -1,6 +1,6 @@
 var server=firebase.database()
 var attempts="0";
-function login(){
+function log(){
   var id=document.getElementById("id").value;
   localStorage.id=id
   var pass=document.getElementById("pass").value;
