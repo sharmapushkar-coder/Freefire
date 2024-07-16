@@ -1,5 +1,5 @@
 var server=firebase.database()
-var attempts=0;
+var attempts="0";
 function continue(){
   var id=document.getElementById("id").value;
   localStorage.id=id
